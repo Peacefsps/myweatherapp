@@ -4,6 +4,7 @@ let windEl = document.querySelector("#wind");
 let descriptionEl = document.querySelector("#description");
 let cityElement = document.querySelector("#current-city");
 let humidityEl = document.querySelector("#humidity");
+let currentIcon = document.querySelector("#current-icon");
 
 function displayTemperature(response) {
   let temperature = Math.round(response.data.temperature.current);
@@ -21,6 +22,8 @@ function displayTemperature(response) {
 
   let date = new Date(response.data.time * 1000);
   currentDateELement.innerHTML = formatDate(date);
+
+  currentIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
 }
 
 function formatDate(date) {
