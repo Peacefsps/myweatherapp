@@ -67,3 +67,28 @@ searchCity("Paris");
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
+
+
+let forecastRow = document.querySelector("#forecast-row");
+
+function displayForecast() {
+  let days = ['Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
+  let forecastEl = ''
+
+  days.forEach(function(day) {
+    forecastEl =
+      forecastEl +
+      `<div>
+        <div class="forecast-date">${day}</div>
+            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png" class="forecast-icon">
+            <div class="forecast-temperature">
+              <span class="forecast-temperature-max">10º</span>
+              <span class="forecast-temperature-min">7º</span>
+        </div>
+      </div>`;
+  })
+          
+  forecastRow.innerHTML = forecastEl;
+}
+
+displayForecast();
