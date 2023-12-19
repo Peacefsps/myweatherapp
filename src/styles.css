@@ -90,11 +90,34 @@ main {
   position: relative;
   top: -38px;
 }
+.weather-forecast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.row {
+  text-align: center;
+}
+
+.forecast-icon {
+  width: 50px;
+  height: 50px;
+}
+.forecast-date {
+  font-size: 16px;
+  color: #000;
+}
+.forecast-temperature {
+  font-size: 13px;
+}
+.forecast-temperature-min {
+  opacity: 0.5;
+}
+
 
 footer {
   border-top: 1px solid #f9f7fe;
   text-align: center;
   padding-top: 15px;
-
   color: rgba(39, 33, 66, 0.4);
 }
